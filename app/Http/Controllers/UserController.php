@@ -9,6 +9,8 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 class UserController extends Controller
 {
     //
+
+
     public function auth(Request $request)
     {
         // grab credentials from the request

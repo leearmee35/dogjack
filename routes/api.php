@@ -14,3 +14,5 @@ use Illuminate\Http\Request;
 */
 
 Route::post('auth','UserController@auth');
+
+Route::get('show', 'EmployerController@show');
