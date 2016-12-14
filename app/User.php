@@ -18,6 +18,10 @@ class User extends Authenticatable
         'name', 'email', 'password', 'imagepath','longtitude','latitude','aboutus','address','city','state','zipcode'
     ];
 
+    protected $attributes = array(
+        'aboutus' => 'All about that bass',
+    );
+
     /**
      * The attributes that should be hidden for arrays.
      *
