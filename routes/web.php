@@ -15,3 +15,4 @@
 Auth::routes();
 
 Route::get('/home', 'UserController@index');
+Route::get('/','UserController@index');
