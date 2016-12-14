@@ -15,4 +15,4 @@ use Illuminate\Http\Request;
 
 Route::post('auth','UserController@auth');
 
-Route::get('show', 'EmployerController@show');
+Route::get('user/{id}', 'EmployerController@getUser');

@@ -14,8 +14,11 @@ class EmployerController extends Controller
         $this->middleware('jwt.auth');
     }
 
-    public function show(){
-        return User::all();
+    public function getUser($id){
+
+        $user = User::find($id);
+
+        return response()->json(compact('user'));
     }
 
 }
