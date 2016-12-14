@@ -30,4 +30,8 @@ class UserController extends Controller
         return response()->json(compact('token'));
     }
 
+    public function index()
+    {
+        return view('home');
+    }
 }
