@@ -31,8 +31,14 @@ class EmployerController extends Controller
             $img = Image::make(Input::file('image'))->resize(300, 400)->save('images/abc.jpg');
 
             $name = $request->input('name');
+            $imagepath = $name;
+            $longtitude = $request->input('longtitude');
+            $latitude = $request->input('latitude');
+            $aboutus = $request->input('aboutus');
+            $user = User::find($request->input('id'));
 
-            return $name;
+
+            return $user;
         }
 
         return "No";
