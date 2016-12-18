@@ -37,6 +37,12 @@ class EmployerController extends Controller
             $aboutus = $request->input('aboutus');
             $user = User::find($request->input('id'));
 
+            $user->name = $name;
+            $user->imagepath = $imagepath;
+            $user->longtitude = $longtitude;
+            $user->latitude = $latitude;
+            $user->aboutus = $aboutus;
+            $user->save();
 
             return $user;
         }
