@@ -15,4 +15,6 @@ use Illuminate\Http\Request;
 
 Route::post('auth','UserController@auth');
 
+Route::post('store/profile', 'EmployerController@storeProfile');
+
 Route::get('user/{id}', 'EmployerController@getUser');
