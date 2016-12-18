@@ -23,16 +23,16 @@ class EmployerController extends Controller
         return response()->json(compact('user'));
     }
 
-    public function storeProfile(){
+    public function storeProfile(Request $request){
 
         if(Input::hasFile('image')){
 
 
-            $img = Image::make(Input::file('image'))->resize(300, 300)->save('images/abc.jpg');
+            $img = Image::make(Input::file('image'))->resize(300, 400)->save('images/abc.jpg');
 
 
 
-            return "has Image";
+            return $request->body;
         }
 
         return "No";
