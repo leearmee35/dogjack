@@ -30,9 +30,9 @@ class EmployerController extends Controller
 
             $img = Image::make(Input::file('image'))->resize(300, 400)->save('images/abc.jpg');
 
+            $name = $request->input('name');
 
-
-            return $request->body;
+            return $name;
         }
 
         return "No";
