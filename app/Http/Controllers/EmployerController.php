@@ -33,13 +33,13 @@ class EmployerController extends Controller
         $user = User::find($request->input('id'));
 
         if(!$request->input('name')){
-            $name = "Defaut Name";
+            $name = "kkk";
         }
 
         if(Input::hasFile('image')){
 
 
-            $img = Image::make(Input::file('image'))->resize(300, 400)->save('images/'.$name.'.jpg');
+            $img = Image::make(Input::file('image'))->resize(300, 400)->save('images/abc.jpg');
 
         }
 
